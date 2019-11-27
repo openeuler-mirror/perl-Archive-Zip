@@ -1,5 +1,4 @@
-
-bal __requires_exclude %{?__requires_exclude:%__requires_exclude|}^perl\\(File::Spec\\)$
+%global __requires_exclude %{?__requires_exclude:%__requires_exclude|}^perl\\(File::Spec\\)$
 
 Name:           perl-Archive-Zip
 Version:        1.64
