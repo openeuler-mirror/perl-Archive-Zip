@@ -2,7 +2,7 @@
 
 Name:           perl-Archive-Zip
 Version:        1.64
-Release:        2
+Release:        3
 Summary:        Perl library for accessing Zip archives
 License:        (GPL+ or Artistic) and BSD
 URL:            https://metacpan.org/release/Archive-Zip
@@ -64,5 +64,8 @@ make test
 %{_mandir}/man3/Archive*.3*
 
 %changelog
+* Mon Jan 13 2020 xuxijian<xuxijian@hauwei.com> - 1.64-3
+- delete a buildRequire
+
 * Tue Nov 26 2019 liujing<liujing144@huawei.com> - 1.64-2
 - Package init
