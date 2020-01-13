@@ -2,7 +2,7 @@
 
 Name:           perl-Archive-Zip
 Version:        1.64
-Release:        2
+Release:        3
 Summary:        Perl library for accessing Zip archives
 License:        (GPL+ or Artistic) and BSD
 URL:            https://metacpan.org/release/Archive-Zip
@@ -15,7 +15,7 @@ BuildRequires:  perl(constant) perl(Cwd) perl(Data::Dumper) perl(Encode) perl(Ex
 BuildRequires:  perl(File::Basename) perl(File::Copy) perl(File::Find) perl(File::Path)
 BuildRequires:  perl(File::Spec) >= 0.80 perl(File::Temp) perl(FileHandle) perl(integer)
 BuildRequires:  perl(IO::File) perl(IO::Seekable) perl(Time::Local) perl(vars) perl(lib)
-BuildRequires:  perl(File::Spec::Unix) perl(Test::MockModule) perl(Test::More) >= 0.88
+BuildRequires:  perl(File::Spec::Unix) perl(Test::More) >= 0.88
 BuildRequires:  perl(utf8) perl(warnings) unzip zip
 Requires:       perl(:MODULE_COMPAT_%(eval "`perl -V:version`"; echo $version))
 Requires:       perl(Exporter) perl(File::Spec) >= 0.80
@@ -64,5 +64,8 @@ make test
 %{_mandir}/man3/Archive*.3*
 
 %changelog
+* Mon Jan 13 2020 xuxijian<xuxijian@hauwei.com> - 1.64-3
+- delete a buildRequire
+
 * Tue Nov 26 2019 liujing<liujing144@huawei.com> - 1.64-2
 - Package init
