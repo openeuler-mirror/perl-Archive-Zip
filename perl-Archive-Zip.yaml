@@ -1,0 +1,4 @@
+version_control: metacpan
+src_repo: Archive-Zip
+tag_prefix: "^v"
+seperator: "."
