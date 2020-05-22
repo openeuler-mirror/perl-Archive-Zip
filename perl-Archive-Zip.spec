@@ -17,6 +17,7 @@ BuildRequires:  perl(File::Spec) >= 0.80 perl(File::Temp) perl(FileHandle) perl(
 BuildRequires:  perl(IO::File) perl(IO::Seekable) perl(Time::Local) perl(vars) perl(lib)
 BuildRequires:  perl(File::Spec::Unix) perl(Test::More) >= 0.88
 BuildRequires:  perl(utf8) perl(warnings) unzip zip
+BuildRequires:  perl(Test::MockModule)
 Requires:       perl(:MODULE_COMPAT_%(eval "`perl -V:version`"; echo $version))
 Requires:       perl(Exporter) perl(File::Spec) >= 0.80
 
