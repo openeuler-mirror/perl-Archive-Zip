@@ -2,13 +2,13 @@
 
 Name:           perl-Archive-Zip
 Version:        1.64
-Release:        4
+Release:        5
 Summary:        Perl library for accessing Zip archives
 License:        (GPL+ or Artistic) and BSD
 URL:            https://metacpan.org/release/Archive-Zip
 Source0:        https://cpan.metacpan.org/authors/id/P/PH/PHRED/Archive-Zip-%{version}.tar.gz
 BuildArch:      noarch
-BuildRequires:  git-core make perl-interpreter perl-generators perl(:VERSION) >= 5.4
+BuildRequires:  make perl-interpreter perl-generators perl(:VERSION) >= 5.4
 BuildRequires:  perl(Config) perl(ExtUtils::MakeMaker) >= 6.76 perl(strict)
 BuildRequires:  perl(:VERSION) >= 5.6 perl(bytes) perl(Carp) perl(Compress::Raw::Zlib)
 BuildRequires:  perl(constant) perl(Cwd) perl(Data::Dumper) perl(Encode) perl(Exporter)
@@ -40,7 +40,7 @@ Summary:        Help documents for perl-Archive-Zip
 The perl-Archive-Zip-help package conatins manual pages for perl-Archive-Zip.
 
 %prep
-%autosetup -n Archive-Zip-%{version} -p1 -S git
+%autosetup -n Archive-Zip-%{version} -p1
 for F in examples/*.pl; do
     perl -MExtUtils::MakeMaker -e "ExtUtils::MM_Unix->fixin(q{$F})"
 done
@@ -65,6 +65,9 @@ make test
 %{_mandir}/man3/Archive*.3*
 
 %changelog
+* Fri Jul 30 2021 chenyanpanHW <chenyanpan@huawei.com> - 1.64-5
+- DESC: delete -S git from %autosetup, and delete BuildRequires git-core
+
 * Thu May 28 2020 songzhengyu<songzhengyu@huawei.com> - 1.64-4
 - add a buildRequire
 
